@@ -15,7 +15,6 @@ from phileo.utils import widget_context
 
 
 @login_required
-@require_POST
 def like_toggle(request, content_type_id, object_id):
     content_type = get_object_or_404(ContentType, pk=content_type_id)
     obj = content_type.get_object_for_this_type(pk=object_id)
